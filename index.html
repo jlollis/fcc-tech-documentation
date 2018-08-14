@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+  <!--CDN for FCC Test Suite: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+
+
+<nav id="navbar">
+  <header>
+    <a href="https://www.gimp.org/" target="_blank">
+      <img src="gimp-nobg.png" class="responsive">
+    </a>
+  </header>
+  <ul>
+    <a class="nav-link" href="#Section1" rel="internal">
+      <li>Modding GIMP to Emulate Photoshop</li>
+    </a>
+    <a class="nav-link" href="#Section2" rel="internal">
+      <li>Method One: Use Pre-Built Theme</li>
+    </a>
+    <a class="nav-link" href="#Section3" rel="internal">
+      <li>Method Two: Customize with Several Themes</li>
+    </a>
+    <a class="nav-link" href="#Section4" rel="internal">
+      <li>Make GIMP Function Like Photoshop</li>
+    </a>
+    <a class="nav-link" href="#Section5" rel="internal">
+      <li>Essential GIMP Plugins</li>
+    </a>
+  </ul>
+</nav>
+
+<main id="main-doc">
+
+  <section class="main-section" id="Section1">
+    <header>Modding GIMP to Emulate Photoshop</header>
+    <article>
+      <p>GIMP is an open source image editor that is very powerful, and best of all, is free! Since Adobe adopted the suscription
+        model several years ago, Photoshop has become an ever-increasingly expensive luxury. After the most recent price
+        hike, I decided to cancel my subscription and revisit GIMP. I have a high level of comfort with Photoshop, and decided
+        to see what could be done to make GIMP more like Photoshop. The following document details some of the modications
+        that can be done to GIMP to bring it more in line with Photoshop in terms of appearance, commands (shortcuts) and
+        functionality.
+      </p>
+
+
+    </article>
+  </section>
+
+  <section class="main-section" id="Section2">
+    <header>Method One: Use Pre-Built Theme</header>
+    <article>
+      <p>It's quick and easy to get a GIMP that looks and works more like Photoshop.</p>
+
+      <p>First, we visit Doctormo's Deviantart page and download the Gimp 2.8 Photoshop Tweaks file.</p>
+
+      <p>Then, we press the Windows Key + R and type into the Run command window:</p>
+
+      <code>%userprofile%</code>
+
+      <p>Inside our user profile folder, we rename the .gimp-2.8 folder to anything else, e.g. .gimp-2.8 backup</p>
+
+      <p>Finally, we extract the tweaked .gimp-2.8 folder from the zip to our profile folder. Remember this folder, we will
+        be using it a lot as we make GIMP like Photoshop.</p>
+
+      <p>Before the tweak, GIMP looked like this by default. Now, GIMP is much more like Photoshop.We get the Photoshop tools
+        icons, the dark background, and the panels on the right in a much different arrangement. We also get the Photoshop
+        keyboard shortcuts.</p>
+    </article>
+  </section>
+
+  <section class="main-section" id="Section3">
+    <header>Method Two: Customize with Several Themes</header>
+    <article>
+      <h3>Install Dark Theme GIMP from partha.com</h3>
+
+      <p>The above theme makes GIMP look better than the default, but it still doesn't look much like Photoshop, at least not
+        the latest version of the app. For those who are sticklers for detail, there is an alternate way to get GIMP much
+        more like Photoshop CS6. But it's a bit more complicated to install. This is a separate method; do not combine with
+        Method One.</p>
+
+      <p>First, we need to download a different dark-theme build of GIMP from http://www.partha.com/. Since GIMP is an open
+        source app, any programmer can create their custom version. Download the Windows 64-bit, stable 2.8 version. If you
+        already have GIMP installed, you will need to uninstall and reboot before installing the modified version from partha.com.
+        After the Partha build is installed, we need to run it one time, in order to create the GIMP settings folder. It
+        will be in the User profile folder, as in the method above.</p>
+
+      <h3>Install GIMP Themes</h3>
+      <p>Next, install
+        <a href="https://www.deviantart.com/migf1/art/Clearlooks-Flat-Icons-Gimp-2-8-Themes-v-1-0-1-484289796" target="_blank">Clearhooks Flat Icons GIMP 2.8 Themes</a> from Deviantart.</p>
+      <p>After downloading, extract all directories within the Clearlooks zip inside the ".gimo-2.8/themes" folder. The current
+        version of Clearlooks includes 29 directories.</p>
+      <p>Launch GIMP, select Windows > Single-Window Mode and then select the theme from Edit > Preferences > Theme. The Dark
+        Blue small theme is recommeneded.</p>
+      <p>Then, close and reopen GIMP. It should now appear more similar to Photoshop.</p>
+      <p>Finally, drag the Tools panel to the upper right column and then shrink the left tools panel, so it only has two rows.</p>
+
+    </article>
+  </section>
+
+  <section class="main-section" id="Section4">
+    <header>Make GIMP Function Like Photoshop</header>
+    <article>
+      <p>Now that the appearance is similar to Photoshop, we turn to bringing the functionality in line with Photoshop.</p>
+      <h3>Install Photoshop Keyboard Shortcuts on GIMP</h3>
+      <p>Doctormo's theme has the Photoshop keyboard shortcuts pre-installed. For the alternative CS6 theme, we need to install
+        them manually. Visit
+        <a href="http://epierce.freeshell.org/gimp/gimp_ps.php" target="_blank">http://epierce.freeshell.org/gimp/gimp_ps.php</a>
+        and download ps-menurc. Right-click the download and select "Save link as...". To install, first we need to have the extensions
+        for the known file types shown, by going to View menu and checking "File name extensions" for Windows 8.1 and Windows
+        10. For Windows 7, we will find the same option at Organize -> Folder and search options -> View, by unchecking the
+        "Hide the file extensions for known file types". The ps-menurc file we downloaded has a .txt extension. Rename the
+        file to menurc and save without the .txt extension.</p>
+
+      <p>Then rename the menurc file inside .gimp-2.8 to menurc-backup, and then copy the new menurc file that was just downloaded.
+        The Photoshop shortcuts have now been added to GIMP.</p>
+
+      <p>Consult the GIMP shortcut cheatsheet at
+        <a href="http://epierce.freeshell.org/gimp/gimp_ps.php" target="_blank">http://epierce.freeshell.org/gimp/gimp_ps.php</a>
+        for comparison.</p>
+
+
+      <h3>Enable Snap to Canvas Edge</h3>
+      <p>GIMP can snap layers to canvas or the grid when moving them, like Photoshop. However this option is not turned on by
+        default, and it doesn't even have a shortcut. To make this the default behavior, we enter the .gimp-2.8 folder in
+        our user profile and open the gimprc file with notepad or any other text editor.</p>
+
+      <p>At the bottom of the file add the following, and then save and close the file:</p>
+      <code>(default-snap-to-canvas yes)
+        <br>(default-snap-to-grid yes)</p>
+      </code>
+      <h3>Disable Layer Boundary</h3>
+      <p>Every selected active layer on GIMP is surrounded by a black and yellow dotted line. To change, go to Edit > Preferences > Image Windows > Appearance, and uncheck the "Show Layer Boundary" in both Normal and full-screen Mode. Close and reopen image files to load the change.</p>
+      <h3>Modify Move Tool</h3>
+      <p>The Move Tool in GIMP will pick a Layer or Guide to move instead of moving the active layer. Longtime Photoshop users might find it hard to get used to this behavior. To change the default, with the Move Tool selected, choose the "Move the active layer" option, then we go to Edit > Preferences > Tools > Options > Save Tool Options Now. Then, uncheck "Save tool options on exit" to load as the default option on startup.</p>
+      <br>
+    </article>
+  </section>
+
+  <section class="main-section" id="Section5">
+    <header>Essential GIMP Plugins</header>
+    <article>
+
+      <h3>Content Aware Fill</h3>
+      <p>The "Content Aware Fill" is a handy option in the latest versions of Photoshop. It allows us to delete an element from
+        a picture in a smart way, with the program automatically filling in the blank according to the rest of the image.
+        What you might not know is that this feature originated as a GIMP plugin called "Resynthesizer". It was later that
+        Adobe incorporated this functionality in Photoshop.</p>
+      <p>To get the full Content Aware Fill for GIMP, we need to download the
+        <a href="https://github.com/bootchk/resynthesizer" target="_blank">Resynthesizer</a> plugin from GitHub. The "resynthesizer-master.zip" we download contains multiple folders and files.
+        We only need the .py files from the PluginScripts folder. We copy them to the ".gimp-2.8/plug-ins/" folder.</p>
+      <p>Resynthesizer allows us to:</p>
+      <ul>
+        <li>Heal (reconstruct) a selection from nearby pixels: Filters -> Enhance -> Heal selection</li>
+        <li>Heal (reconstruct) transparent areas from nearby pixels: Filters -> Enhance -> Heal transparency</li>
+        <li>Transfer the style (color and texture) from one image to another: Filters -> Map -> Style</li>
+        <li>Render seamless texture from one image into a new image: Filters -> Render -> Texture</li>
+        <li>Enlarge an image using the resynthesizer to retain sharpness: Filter ->Enhance -> Enlarge & sharpen</li>
+        <li>Fill seamlessly with a pattern: Edit -> Seamlessly fill with a pattern using synthesis</li>
+        <li>Sharpen an image using the resynthesizer: Filters -> Enhance -> Sharpen by synthesis</li>
+        <li>Enlarge an image while retaining the point of view of the existing image by synthesizing an enlarging border: Filter
+          -> Enhance -> Uncrop</li>
+      </ul>
+      <h3>Layer via Copy/Cut</h3>
+      <p>In Photoshop, pressing ctrl + J or right-clicking and selecting "Layer via copy" can create a new layer from the current
+        selection. GIMP needs a plugin to have this functionality. The
+        <a href="http://gimper.net/resources/layer-via-copy-cut.417/" target="_blank">Layer via Copy/Cut plugin</a> will add this capability to GIMP.
+
+        <p>To enable the plugin, we copy the layer-via-copy-cut.py file to the .gimp-2.8/plug-ins/ folder. At the Layer menu,
+          we will now find the Layer via Copy and the Layer via Cut options available.</p>
+        <h3>Splash Screen</h3>
+        <p>Create your own custom splash screen without the GIMP logo. This will help make your experience feel more like Photoshop,
+          as you won't be constantly reminded of what it is or isn't with the logo. This is purely aesthetic, but I find
+          that removing logos, in general, not only looks better, but also aids focus, as they can be very distracting.</p>
+        <p>Make your own splash screen image and save it as gimp-splash.png. Go to the C:\Program Files\Gimp-2.8\share\gimp\2.0\images
+          directory. Now copy the new gimp-spmash.png file to the images directory. The new image will now be visible on
+          startup.
+        </p>
+<br><br>
+    </article>
+  </section>
+
+  <div id="footer">
+      Made by Julie Lollis for
+      <a href="https://www.freecodecamp.org/">Free Code Camp</a>. GIMP modding instructions adapted from <a href="https://www.pcsteps.com/1566-make-gimp-look-work-like-photoshop/" target="_blank">PCSteps</a>.
+    </div>
+</main>
+</html>
